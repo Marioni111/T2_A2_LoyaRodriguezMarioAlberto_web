@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="validarFormulario.js"></script>
+    <style>
+        form{
+            display: grid;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post" onsubmit="validarFormulario()">
+        <label>numero de control: </label><input id="numControl" type="text" maxlength="8" pattern="[0-9]{8}" title="8 numeros">
+        <label>numero de control: </label><input id="numControlL" type="text" maxlength="9" pattern="[A-Z]{1}[0-9]{8}" title="1 letra 8 numeros">
+        <label>codigo postal: </label><input id="cp" type="text" maxlength="5" pattern="[0-9]{5}" title="5 numeros">
+        <label>telefono: </label><input id="tel" type="tel" maxlength="10" pattern="[0-9]{10}" title="10 numeros">
+        <label>correo: </label><input  id="correo" type="email" pattern="[a-zA-Z]{5,10}[@]{1}[a-zA-Z]+\.[a-zA-Z]{2,5}" title="nombre@pertenece.(com | net)">
+        <label>contraseña: </label><input id="pass" type="password" pattern="[A-Z]{1}[a-z]{1}[0-9]{1}">
+        <input type="submit" value="Enviar">
+    </form>
+    
+</body>
+</html>
